@@ -1,6 +1,10 @@
-from django.http import HttpResponse
+from rest_framework import viewsets, permissions
+from .models import UserData
+from .serializers import UserSerializer
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+# register our view to add logic
 
-"""We will have to create viewsets to fetch data from our serializer"""
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = UserData.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.AllowAny] # to enable no serious authentication

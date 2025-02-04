@@ -11,7 +11,7 @@ class UserData(models.Model):
     def __str__(self):
         return self.name
     class Meta:
-        verbose_name = 'Retriver'
+        verbose_name = 'User Data'
 
 
 

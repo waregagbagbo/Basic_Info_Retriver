@@ -1,7 +1,7 @@
+# register our API routes
+
 from django.urls import path
-
-from . import views
-
-urlpatterns = [
-    path("", views.index, name="index"),
+from .views import UserViewSet
+urlpatterns =[
+    path('', UserViewSet.as_view({'get': 'list','post':'create'})),
 ]
