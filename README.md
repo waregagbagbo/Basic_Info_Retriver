@@ -11,26 +11,23 @@ Django 3.x or 4.x
 Django Rest Framework
 SQLite/PostgreSQL/MySQL (choose your preferred database)
 ## Prerequisites
-Python 3.6 or higher installed on your machine.
-pip or pipenv for managing dependencies.
+Python 3.6 or higher installed on your machine.<br/>
+pip or pipenv for managing dependencies.<br/>
 (Optional) Virtual environment tool such as venv or virtualenv.
 ## Installation
 Clone the repository:
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/yourusername/your-repo-name.git<br/>
 
-cd your-repo-name
-
-Create and activate a virtual environment:
-
-python3 -m venv env
-
-source env/bin/activate  # On Windows use `env\Scripts\activate`
+cd your-repo-name<br/>
+Create and activate a virtual environment:<br/>
+python3 -m venv env <br/>
+source env/bin/activate  # On Windows use `env\Scripts\activate`<br/>
 
 #### Install the required packages:
 pip install -r requirements.txt
 #### Apply migrations:
-python manage.py migrate
-Create a superuser (optional, for admin access):
+python manage.py migrate<br/>
+Create a superuser (optional, for admin access):<br/>
 python manage.py createsuperuser
 ## Configuration
 Settings:
@@ -50,9 +47,9 @@ Description: Retrieves basic information (e.g., about the service, available res
 Example Response:
 json
 {
-  "name": "Public Info API",
-  "version": "1.0",
-  "description": "This API provides basic information retrieval endpoints.",
+  "name": "Public Info API",<br/>
+  "version": "1.0",<br/>
+  "description": "This API provides basic information retrieval endpoints.",<br/>
   "data": {
     "example_field": "example_value"
   }
