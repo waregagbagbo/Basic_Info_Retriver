@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Retriver
+from .models import UserData
 
 # Register your models here.
 
-admin.site.register(Retriver) # register the model in the admin panel
+admin.site.register(UserData) # register the model in the admin panel
 
