@@ -137,3 +137,4 @@ REST_FRAMEWORK ={
 
 # settings for corsheaders
 CORS_ALLOWED_METHODS = ['GET','POST']
+CORS_ALLOWED_CREDENTIALS = True
