@@ -5,7 +5,8 @@ from django.db import models
 class UserData(models.Model):
     name = models.CharField(max_length=100);
     email = models.EmailField();
-    currentDate = models.DateField();
+    currentDate = models.DateField(auto_now=True);
+    updated_at = models.DateTimeField(auto_now=True)
     gitUrl = models.URLField();
 
     def __str__(self):
