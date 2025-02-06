@@ -89,6 +89,7 @@ WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 }"""
 
 # Database configuration
+DATABASE_URL = 'postgresql://hng_cugn_user:VmkTDnr43mi9Kazj95ZmVTqY51bKOLJ8@dpg-cuigqs56l47c73af9140-a.virginia-postgres.render.com/hng_cugn'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
