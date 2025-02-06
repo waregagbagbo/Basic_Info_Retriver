@@ -6,8 +6,8 @@ class UserData(models.Model):
     name = models.CharField(max_length=100);
     email = models.EmailField();
     currentDate = models.DateField(auto_now=True);
-    updated_at = models.DateTimeField(auto_now=True)
-    gitUrl = models.URLField();
+    current_datetime = models.DateTimeField(auto_now=True)
+    github_url = models.URLField();
 
     def __str__(self):
         return self.name
