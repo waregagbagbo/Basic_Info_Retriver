@@ -96,7 +96,7 @@ DATABASES={
 # Database configuration
 DATABASES['default']=dj_database_url.parse(config('DATABASE_URL'))
 
-"""DATABASES['default']= dj_database_url.parse('postgresql://hng_cugn_user:VmkTDnr43mi9Kazj95ZmVTqY51bKOLJ8@dpg-cuigqs56l47c73af9140-a.virginia-postgres.render.com/hng_cugn')"""
+#DATABASES['default']= dj_database_url.parse('postgresql://hng_cugn_user:VmkTDnr43mi9Kazj95ZmVTqY51bKOLJ8@dpg-cuigqs56l47c73af9140-a.virginia-postgres.render.com/hng_cugn')
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
