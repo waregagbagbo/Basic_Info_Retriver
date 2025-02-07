@@ -11,11 +11,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 from email.policy import default
 from pathlib import Path
-from dotenv import load_dotenv
+from decouple import config
 import os
 import dj_database_url
 
-load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,10 +28,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8@jpgnu%j5f*_s)s$##io38@24&b$8t3rw$ekn*t!o4wdzt_rw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+#DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Allowed host
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if not DEBUG else []
+#ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 
 # Application definition
@@ -93,8 +95,7 @@ DATABASES={
 
 # Database configuration
 
-DATABASES['default']= dj_database_url.parse("postgresql://hng_cugn_user:VmkTDnr43mi9Kazj95ZmVTqY51bKOLJ8@dpg-cuigqs56l47c73af9140-a.virginia-postgres.render.com/hng_cugn")
-
+DATABASES['default']= dj_database_url.parse('postgresql://hng_cugn_user:VmkTDnr43mi9Kazj95ZmVTqY51bKOLJ8@dpg-cuigqs56l47c73af9140-a.virginia-postgres.render.com/hng_cugn')
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
