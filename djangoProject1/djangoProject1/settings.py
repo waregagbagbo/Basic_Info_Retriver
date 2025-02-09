@@ -35,8 +35,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Allowed host
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if not DEBUG else []
-#ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
+#ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if not DEBUG else []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 
 # Application definition
@@ -99,7 +99,7 @@ DATABASES={
 # Database configuration
 #DATABASES['default']=dj_database_url.parse(config('DATABASE_URL'))
 
-DATABASES['default']= dj_database_url.parse('postgresql://hng_cugn_user:VmkTDnr43mi9Kazj95ZmVTqY51bKOLJ8@dpg-cuigqs56l47c73af9140-a.virginia-postgres.render.com/hng_cugn', conn_max_age=600)
+#DATABASES['default']= dj_database_url.parse('postgresql://hng_cugn_user:VmkTDnr43mi9Kazj95ZmVTqY51bKOLJ8@dpg-cuigqs56l47c73af9140-a.virginia-postgres.render.com/hng_cugn', conn_max_age=600)
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
