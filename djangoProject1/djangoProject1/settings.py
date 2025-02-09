@@ -31,14 +31,14 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+#DEBUG = os.environ.get('DEBUG', default='False') == 'True'
 #DEBUG = config('DEBUG', default=False, cast=bool)
 DEBUG = True
 
 # Allowed host
-#ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if not DEBUG else []
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if not DEBUG else []
 #ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
-ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['*']
 
 
 # Application definition
